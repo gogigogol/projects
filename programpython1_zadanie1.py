@@ -1,20 +1,25 @@
 user_choice = -1                      # zmienna z wartoscią inna niz mozliwe wybory 1 do 5
 
 tasks = []                  # tworzymy liste "zadan"
-                           # 1 dodajemy zadanie metodą .append
+                      # 1 dodajemy zadanie metodą .append
                            # tasks.append("Posprzątaj biurko") # dodajemy zadanie metodą .append
 print()
 
 def show_tasks():      # definiujemy funkcje show_tasks 
-  
-    task_index = 0             # definiujemy zmienna  pokazujaca numer zadania, 
+     
+    task_index = 0                # definiujemy zmienna  pokazujaca numer zadania, 
+    
     for task in tasks:         
         print(task + " [" + str(task_index) + "]")   # wyswietlamuy zadania ,obok task chcemy wyswietlic numer "task_index",musimy uzyć "str" i 
-                                                    # umieszczasmy go w nawiasie [ ] kwadratowym
-        task_index +=1                              # zwiekszamy task_index o 1 i przypisujemy te wartosc do zmiennej task_index
-    if task == 0:
-        print("Nie masz jeszce zadan. klknij '2' ")   
-        print() 
+                                              # umieszczasmy go w nawiasie [ ] kwadratowym
+    task_index +=1          # zwiekszamy task_index o 1 i przypisujemy te wartosc do zmiennej task_index
+
+ 
+    print()
+   
+    return
+    
+
                
 def add_task():                               # stworzylismy funkcje dodajaca zadanie i wyswietlajaca "dodano zadanie"
     task = input("Wpisz treść zadania: \n")
@@ -23,7 +28,8 @@ def add_task():                               # stworzylismy funkcje dodajaca za
     
 def delete_task():                          # tworzymy funkcje do usuniecia zadania
     task_index = int(input("Podaj index zadania do usuniecia: ")) 
-    if task_index < 0 or task_index > len(tasks) - 1: # warunek ze numer zadania < 0 (taki nie istnieje) lub warunek ze numer zadania jes twiekszy od dlugosci naszych zadan - 1 , bo index liczmy od 0
+    if task_index < 0 or task_index > len(tasks) - 1:
+        print("zadanie o tym indexie nie istnieje")# warunek ze numer zadania < 0 (taki nie istnieje) lub warunek ze numer zadania jes twiekszy od dlugosci naszych zadan - 1 , bo index liczmy od 0
         return         # nie zwraca zadnej wartosci, konczy wywolanie funkcji
     tasks.pop(task_index)
     print("usunięto zadanie !")
@@ -52,9 +58,11 @@ load_tasks_from_file()           # laduje nam zadania z pliku tasks.txt ( na poc
                                 # msuimy wwiec stowrzyc regułę wyjątku w funkcji load_tasks_from_file
              
 while user_choice != 5:               # do momentu wybrania przez uzytkownika "5" wykonuje sie petla
-    if user_choice == 1:              # user wybiera "1"  pokazja sie zadania "tasks"
-        show_tasks()             # funkcja wyboru task zdefiniowana wcześniej 
-    
+    if user_choice == 1:
+        
+        show_tasks()            # task zdefiniowana wcześniej  funkcja 
+  
+        
     if user_choice == 2:
         add_task()              # funkcja dodawania task zdefiniowana wcześniej 
         
@@ -66,6 +74,8 @@ while user_choice != 5:               # do momentu wybrania przez uzytkownika "5
         
     if user_choice >=6:
         print(" To jest zły numer ! Wybierz numer 1-5 ")   
+        
+  
        
             
             
