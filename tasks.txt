@@ -1,0 +1,7 @@
+obs³u¿ sytuacje wyboru numeru spoza listy 1-5
+zmieñ listê na set lub dictionary( zdecyduj w jaki sposób decydowaæ o kluczach lub pozwolic uzytkownikowi na jego wybór)
+pj i sk¹d go pobraæ, czy gdzie go stworzyæ.
+rozszerzyæ listê o wykonane i trwaj¹ce zadania
+zmieniæ format zapsnych zadañ , np. wykorzystaæ format"jason"
+podzieliæ zadania na kategorie, np powi¹zane z prac¹ , z rozrywk¹ itp
+dodaæ funkcjê automatycznego zapisu przy wyjœciu z programu

@@ -8,19 +8,13 @@ print()
 def show_tasks():      # definiujemy funkcje show_tasks 
      
     task_index = 0                # definiujemy zmienna  pokazujaca numer zadania, 
-    
     for task in tasks:         
         print(task + " [" + str(task_index) + "]")   # wyswietlamuy zadania ,obok task chcemy wyswietlic numer "task_index",musimy uzyć "str" i 
                                               # umieszczasmy go w nawiasie [ ] kwadratowym
-    task_index +=1          # zwiekszamy task_index o 1 i przypisujemy te wartosc do zmiennej task_index
-
- 
+        task_index +=1          # zwiekszamy task_index o 1 i przypisujemy te wartosc do zmiennej task_index
     print()
-   
     return
-    
-
-               
+             
 def add_task():                               # stworzylismy funkcje dodajaca zadanie i wyswietlajaca "dodano zadanie"
     task = input("Wpisz treść zadania: \n")
     tasks.append(task)                        # dodaje zadanie wpisane przez usera
@@ -59,10 +53,8 @@ load_tasks_from_file()           # laduje nam zadania z pliku tasks.txt ( na poc
              
 while user_choice != 5:               # do momentu wybrania przez uzytkownika "5" wykonuje sie petla
     if user_choice == 1:
-        
         show_tasks()            # task zdefiniowana wcześniej  funkcja 
-  
-        
+      
     if user_choice == 2:
         add_task()              # funkcja dodawania task zdefiniowana wcześniej 
         
@@ -73,7 +65,7 @@ while user_choice != 5:               # do momentu wybrania przez uzytkownika "5
         save_tasks_to_file()
         
     if user_choice >=6:
-        print(" To jest zły numer ! Wybierz numer 1-5 ")   
+        print(" To jest zły numer ! Wybierz numer z listy  1-5 ")   
         
   
        
