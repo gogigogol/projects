@@ -80,7 +80,7 @@ while user_choice != 5:               # do momentu wybrania przez uzytkownika "5
     print()                                    # daje nam nowa pusta linie dla przejrzystosci 
 
     user_choice = int(input("wpisz liczbę: "))
-    print()
+    print("wybierz liczbę od 1 do 5: ")
     print()
     
                                          
